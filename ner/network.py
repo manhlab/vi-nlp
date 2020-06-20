@@ -267,6 +267,7 @@ class NER:
             # iterate over the sentences because no batching in viterbi_decode
             for logit, sequence_length in zip(logits, sequence_lengths):
                 logit = logit[:int(sequence_length)]  # keep only the valid steps
+                print(logit, trans_params)
                 viterbi_seq, viterbi_score = tf.contrib.crf.viterbi_decode(logit, trans_params)
                 y_pred += [viterbi_seq]
         else:
