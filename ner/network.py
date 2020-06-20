@@ -23,8 +23,8 @@ from layers import stacked_rnn
 from tensorflow.contrib.layers import xavier_initializer
 
 
-from .corpus import Corpus
-from .evaluation import precision_recall_f1
+from corpus import Corpus
+from evaluation import precision_recall_f1
 
 
 SEED = 42
