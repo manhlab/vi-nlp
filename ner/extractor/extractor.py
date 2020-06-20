@@ -33,8 +33,7 @@ class Extractor:
             self.corpus,
             verbouse=False,
             pretrained_model_filepath=self._get_path('ner_model'),
-            **self.network_params,
-        )
+            **self.network_params)
 
         self.tokenizer = tokenizer or Tokenizer()
         self._morph = pymorphy2.MorphAnalyzer()
